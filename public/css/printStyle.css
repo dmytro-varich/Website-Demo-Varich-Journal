@@ -1,0 +1,35 @@
+@media print { 
+
+    .body {
+        background-color: white;
+    }
+
+    .body, p, a {
+        color: black !important;
+    }
+
+    .header-logo, .header-burger {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    p, a {
+        font-family: 'serif' !important;
+    }
+
+    .p-reserved {
+        display: none;
+    }
+
+    .custom-disclaimer {
+        color: black;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
