@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="screenStyle.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/printStyle.css" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#000000"
+    />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
+    <!-- Tittle -->
+    <title>Varich Journal</title>
+  </head>
+  <body class="index-body">
+    <div class="index-page">
+      <div class="video-container" id="videoContainer">
+        <video autoplay muted loop>
+          <source src="videos/earth-video.mp4" type="video/mp4" />
+        </video>
+        <div class="overlay" id="overlay"></div>
+      </div>
+      <div class="index-links">
+        <!-- SVG item -->
+        <div class="svg-item">
+          <svg height="90" width="90">
+            <!-- Background -->
+            <circle cx="50" cy="50" r="40" stroke-width="4" fill="black" />
+
+            <!-- Big stars -->
+            <polygon
+              points="5.625,-0.625 1.875,11.125 11.25,4.25 0,4.25 9.375,11.75"
+              style="fill: #8a86ff; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(15, 50)"
+            />
+
+            <polygon
+              points="5.625,-0.625 1.875,11.125 11.25,4.25 0,4.25 9.375,11.75"
+              style="fill: #bae4f4; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(35, 20)"
+            />
+
+            <polygon
+              points="5.625,-0.625 1.875,11.125 11.25,4.25 0,4.25 9.375,11.75"
+              style="fill: #ffffff; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(46, 82)"
+            />
+
+            <polygon
+              points="5.625,-0.625 1.875,11.125 11.25,4.25 0,4.25 9.375,11.75"
+              style="fill: #f7ebaf; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(80, 35)"
+            />
+
+            <polygon
+              points="5.625,-0.625 1.875,11.125 11.25,4.25 0,4.25 9.375,11.75"
+              style="fill: #fde881; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(55, 50)"
+            />
+
+            <!-- Small stars -->
+            <polygon
+              points="2.8125,-0.3125 0.9375,5.5625 5.625,2.125 0,2.125 4.6875,5.875"
+              style="fill: #8a86ff; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(65, 73)"
+            />
+
+            <polygon
+              points="2.8125,-0.3125 0.9375,5.5625 5.625,2.125 0,2.125 4.6875,5.875"
+              style="fill: #bae4f4; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(60, 20)"
+            />
+
+            <polygon
+              points="2.8125,-0.3125 0.9375,5.5625 5.625,2.125 0,2.125 4.6875,5.875"
+              style="fill: #ffffff; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(30, 70)"
+            />
+
+            <polygon
+              points="2.8125,-0.3125 0.9375,5.5625 5.625,2.125 0,2.125 4.6875,5.875"
+              style="fill: #f7ebaf; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(75, 55)"
+            />
+
+            <polygon
+              points="2.8125,-0.3125 0.9375,5.5625 5.625,2.125 0,2.125 4.6875,5.875"
+              style="fill: #fde881; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(37, 40)"
+            />
+
+            <polygon
+              points="2.8125,-0.3125 0.9375,5.5625 5.625,2.125 0,2.125 4.6875,5.875"
+              style="fill: #fcbf4e; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(17, 35)"
+            />
+
+            <polygon
+              points="2.8125,-0.3125 0.9375,5.5625 5.625,2.125 0,2.125 4.6875,5.875"
+              style="fill: #ff8279; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(50, 67)"
+            />
+
+            <!-- Tiny stars -->
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #fcbf4e; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(70, 30)"
+            />
+
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #ff8279; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(27, 27)"
+            />
+
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #ffffff; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(50, 60)"
+            />
+
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #ff8279; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(20, 70)"
+            />
+
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #ffffff; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(45, 75)"
+            />
+
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #bf40f0; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(35, 80)"
+            />
+
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #8a86ff; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(53, 13)"
+            />
+
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #8a86ff; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(50, 30)"
+            />
+
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #ffffff; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(80, 70)"
+            />
+
+            <polygon
+              points="1.40625,-0.15625 0.46875,2.78125 2.8125,1.0625 0,1.0625 2.34375,2.9375"
+              style="fill: #bf40f0; stroke-width: 1; fill-rule: nonzero"
+              transform="translate(55, 45)"
+            />
+
+            <!-- Name -->
+            <text
+              fill="#ffffff"
+              font-size="45"
+              font-family="Verdana"
+              x="25"
+              y="69"
+            >
+              VJ
+            </text>
+          </svg>
+        </div>
+        <h2>
+          <a href="#journal" class="overlay-link3">VARICH JOURNAL</a>
+        </h2>
+        <div id="menuIts" class="index-links">
+          <a
+            href="#articles/1/10"
+            id="link1"
+            class="overlay-link"
+            data-link-id="link1"
+            onclick="activateLink('link1')"
+            >ARTICLES</a
+          >
+          <a
+            href="#comments"
+            id="link2"
+            class="overlay-link"
+            data-link-id="link2"
+            onclick="activateLink('link2')"
+            >COMMENTS</a
+          >
+          <a
+            href="#journal"
+            id="link0"
+            class="overlay-link active"
+            data-link-id="link0"
+            onclick="activateLink('link0')"
+            >JOURNAL</a
+          >
+          <a
+            href="#addComment"
+            id="link4"
+            class="overlay-link"
+            data-link-id="link4"
+            onclick="activateLink('link4')"
+            >+ ADD COMMENT</a
+          >
+          
+        </div>
+      </div>
+    </div>
+    <main id="router-view"></main>
+
+    <template id="template-journal">
+      <article class="article-journal">
+        <div class="journal-text">
+          <!-- <h2>About Journal</h2> -->
+          <p style="text-align: justify">
+            Welcome to Varich Journal – your gateway to a diverse exploration of
+            topics ranging from <span>technology</span>, <span>finance</span>,
+            and business to success, style, health, nutrition, sports, and life.
+            Founded in 2021, Varich Journal serves as a multifaceted platform
+            that delves into various spheres, aiming to inspire, inform, and
+            entertain.
+          </p>
+          <p style="text-align: justify">
+            Our visionary founder and chief editor, Dmytro Varich, envisioned a
+            space where ideas converge, fostering a community driven by
+            curiosity and passion. With a commitment to providing unique
+            insights and perspectives, Varich Journal stands as a testament to
+            the ever-evolving landscape of knowledge and creativity.
+          </p>
+          <p style="text-align: justify">
+            Join us on this exciting journey as we navigate the realms of
+            information, sparking conversations, and embracing the diverse
+            tapestry of life's experiences.
+          </p>
+        </div>
+        <div class="journals-container">
+          <div class="Journals">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              class="left-arrow"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.354 1.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .708-.708L5.707 8l5.647-5.646a.5.5 0 0 0 0-.708z"
+                flip="horizontal"
+              />
+            </svg>
+            <div class="journals-block">
+              <div class="Journal1">
+                <figure class="warren-journal">
+                  <img
+                    src="fig/warren-buffet-cover-november-2023-2.png"
+                    alt="warren buffet"
+                  />
+                  <figcaption>Varich Journal <br />Nov 2023</figcaption>
+                </figure>
+
+                <figure>
+                  <img
+                    src="fig/travis-scott-cover-october-2023.png"
+                    alt="travis scott"
+                  />
+                  <figcaption>
+                    Varich Journal <br />
+                    Oct 2023
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="Journal2">
+                <figure class="drake-journal">
+                  <img src="fig/drake-cover-september-2023.png" alt="drake" />
+                  <figcaption>Varich Journal <br />Sep 2023</figcaption>
+                </figure>
+                <figure class="altman-journal">
+                  <img src="fig/sam-altman-august-2023.png" alt="sam altman" />
+                  <figcaption>Varich Journal <br />Aug 2023</figcaption>
+                </figure>
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              class="right-arrow"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <template id="template-articles">
+      <div class="articles-main">
+        <div class="articles-left-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            fill="#ffffff"
+            class="left-arrow"
+            viewBox="0 0 16 16"
+          >
+            {{#prevPage}}
+            <a href="#articles/{{prevPage}}/{{pageCount}}">
+              <path
+                d="M11.354 1.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .708-.708L5.707 8l5.647-5.646a.5.5 0 0 0 0-.708z"
+                flip="horizontal"
+              />
+            </a>
+            {{/prevPage}}
+          </svg>
+        </div>
+        {{#articles}}
+        <article>
+          <section class="articles-section">
+            <div class="articles-profile">
+              <div class="articles-block">
+                <h4>
+                  <span class="articles-name">{{articles.title}}</span>
+                </h4>
+                <p style="color: #959595">by {{articles.author}}</p>
+              </div>
+              <img
+                src="{{articles.imageLink}}"
+                alt="avatar"
+                width="32px"
+                height="32px"
+              />
+            </div>
+          </section>
+        </article>
+        {{/articles}}
+        <div class="articles-right-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            fill="#ffffff"
+            class="right-arrow"
+            viewBox="0 0 16 16"
+          >
+            {{#nextPage}}
+            <a href="#articles/{{nextPage}}/{{pageCount}}">
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              />
+            </a>
+            {{/nextPage}}
+          </svg>
+        </div>
+      </div>
+    </template>
+
+    <template id="template-comments">
+      <div class="comment-main">
+        <div class="comment-left-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            fill="#ffffff"
+            class="left-arrow"
+            viewBox="0 0 16 16"
+            onclick="changePage(-1)"
+          >
+            <path
+              d="M11.354 1.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .708-.708L5.707 8l5.647-5.646a.5.5 0 0 0 0-.708z"
+              flip="horizontal"
+            />
+          </svg>
+        </div>
+        {{#opinions}}
+        <article id="artComments">
+          <section class="comment-section">
+            <div class="comment-profile">
+              <img
+                src="{{url_photo}}"
+                alt="avatar"
+                width="32px"
+                height="32px"
+              />
+              <div class="comment-block">
+                <h4>
+                  <span class="comment-name">
+                    {{first_name}} {{last_name}}</span
+                  >
+                  <span class="timeAgo"
+                    ><span style="color: #ffffff">{{timeAgoResult}}</span>
+                    <span style="color: #959595">#{{tag}}</span></span
+                  >
+                </h4>
+                <p style="color: #ffffff">{{comment}}</p>
+              </div>
+            </div>
+          </section>
+        </article>
+        {{/opinions}}
+        <div class="comment-right-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            fill="#ffffff"
+            class="right-arrow"
+            onclick="changePage(-1)"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </div>
+    </template>
+
+    <template id="template-addComment">
+      <article id="artOpnFrm">
+        <div class="Formular">
+          <form id="opnFrm">
+            <div class="form-field">
+              <div class="first-part-field">
+                <div class="header-form-field"><h2>Enter for Account</h2></div>
+                <div class="text-field">
+                  <div class="name-text-field">
+                    <label for="first_name">
+                      <input
+                        type="text"
+                        id="first_name"
+                        name="first_name"
+                        aria-label="none"
+                        title="none"
+                        required
+                        oninvalid="event.preventDefault();"
+                        oninput="validateInput(this);"
+                        onfocus="markTouched(this);"
+                        onblur="validateOnBlur(this);"
+                        data-validation-message="Please enter first name"
+                        placeholder="NAME"
+                      />
+                      <span class="invalid-input">Please enter first name</span>
+                    </label>
+                    <label for="last_name">
+                      <input
+                        type="text"
+                        id="last_name"
+                        name="last_name"
+                        required
+                        oninvalid="event.preventDefault();"
+                        oninput="validateInput(this);"
+                        onfocus="markTouched(this);"
+                        onblur="validateOnBlur(this);"
+                        placeholder="SURNAME"
+                        data-validation-message="Please enter last name"
+                      />
+                      <span class="invalid-input">Please enter last name</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="text-field">
+                  <label for="email">
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      title="Enter a valid email address"
+                      required
+                      oninvalid="event.preventDefault();"
+                      oninput="validateInput(this);"
+                      onfocus="markTouched(this);"
+                      onblur="validateOnBlur(this);"
+                      placeholder="EMAIL"
+                      data-validation-message="Email cannot be empty"
+                    />
+                    <span class="invalid-input">Email cannot be empty</span>
+                  </label>
+                </div>
+                <div class="text-field">
+                  <label for="photo">
+                    <input
+                      type="text"
+                      id="photo"
+                      name="photo"
+                      onfocus="markTouched(this)"
+                      placeholder="PHOTO's URL-LINK"
+                    />
+                  </label>
+                </div>
+
+                <div class="radio-container">
+                  Choose Your Gender <br />
+                  <div class="radio-field">
+                    <input
+                      type="radio"
+                      id="male"
+                      name="user_gender"
+                      value="Male"
+                    />
+                    <label for="male">Male</label>
+                    <br />
+                    <input
+                      type="radio"
+                      id="female"
+                      name="user_gender"
+                      value="Female"
+                    />
+                    <label for="female">Female</label>
+                  </div>
+                </div>
+              </div>
+              <div class="second-part-field">
+                <div class="header-form-field"><p>Enter for Comment</p></div>
+                <datalist id="categories">
+                  <option value="Journal"></option>
+                  <option value="Technology"></option>
+                  <option value="Finance"></option>
+                  <option value="Culture"></option>
+                  <option value="Style"></option>
+                  <option value="Health"></option>
+                  <option value="Sport"></option>
+                  <option value="Nutrition"></option>
+                </datalist>
+                <div class="second-part-second-field">
+                  <div class="input-field">
+                    <input
+                      type="search"
+                      id="tag"
+                      name="tag"
+                      list="categories"
+                      placeholder="Journal"
+                    />
+                  </div>
+
+                  <div class="textarea-field">
+                    <label for="comment">
+                      <textarea
+                        name="comment"
+                        id="comment"
+                        cols="63"
+                        rows="8"
+                        maxlength="79"
+                        placeholder="Add a comment..."
+                        required
+                        oninvalid="event.preventDefault();"
+                        oninput="validateInput(this);"
+                        onfocus="markTouched(this);"
+                        onblur="validateOnBlur(this);"
+                      ></textarea>
+                    </label>
+                  </div>
+
+                  <div class="checkbox-field">
+                    <input
+                      type="checkbox"
+                      id="personal_data"
+                      name="personal_data"
+                      required
+                    />
+                    <label for="personal_data"
+                      >I agree to the use of my personal data.</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="button-form">
+              <button type="submit" onclick="submitForm()">Send</button>
+              <button type="reset" onclick="resetForm()">Reset</button>
+            </div>
+          </form>
+        </div>
+      </article>
+    </template>
+
+    <script>
+      document.querySelectorAll(".index-links a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          if (
+            link.hash === "#addComment" ||
+            link.hash === "#articles" ||
+            link.hash === "#comments"
+          ) {
+            document.getElementById("overlay").style.display = "block";
+          } else {
+            document.getElementById("overlay").style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <script>
+      function toggleInvalidStyle(input) {
+        const invalidInput =
+          input.parentElement.querySelector(".invalid-input");
+
+        if (invalidInput) {
+          const validationMessage = input.getAttribute(
+            "data-validation-message"
+          );
+
+          if (input.classList.contains("invalid")) {
+            // invalidInput.style.display = "block";
+            // invalidInput.textContent = validationMessage;
+          } else {
+            // invalidInput.style.display = "none";
+            // invalidInput.textContent = "";
+          }
+        }
+      }
+
+      function validateInput(input) {
+        if (input.classList.contains("touched") && input.value.trim() === "") {
+          input.classList.add("invalid");
+        } else {
+          input.classList.remove("invalid");
+        }
+        toggleInvalidStyle(input);
+      }
+
+      function markTouched(input) {
+        input.classList.add("touched");
+        input.placeholder = "";
+      }
+
+      function validateOnBlur(input) {
+        if (input.value.trim() === "") {
+          input.classList.add("invalid");
+        } else {
+          input.classList.remove("invalid");
+        }
+        toggleInvalidStyle(input);
+      }
+
+      function submitForm() {
+        const inputs = document.querySelectorAll(
+          "input[required], textarea[required]"
+        );
+        let isFormValid = true;
+
+        for (const input of inputs) {
+          markTouched(input);
+          validateInput(input);
+
+          if (input.classList.contains("invalid")) {
+            isFormValid = false;
+          }
+        }
+      }
+
+      function resetForm() {
+        const inputs = document.querySelectorAll("input.touched");
+        inputs.forEach((input) => {
+          input.classList.remove("touched", "invalid");
+          toggleInvalidStyle(input);
+          const textarea = document.querySelector("textarea[required]");
+          textarea.classList.remove("touched", "invalid");
+        });
+      }
+    </script>
+
+    <!--include mustache javascript-->
+    <script src="js/mustache.min.js"></script>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
