@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="screenStyle.css" />
-    <link rel="stylesheet" type="text/css" href="public/css/printStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="public/css/screenStyle.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/printStyle.css" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -30,20 +32,615 @@
     />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="theme-color" content="#000000" />
-    <title>HEALTH</title>
+
+    <title>Sleep and Health: Tips and Strategies for Better Sleep</title>
   </head>
   <body>
-    <!-- Main Wrapper -->
-    <div class="main-page">
-      <h1>Tips and strategies to improve the quality of your sleep at night</h1>
+    <header class="header-logo">
+      <button id="myButton">Subscribe</button>
+      <img src="fig/logo.png" alt="Varich Journal" width="80" />
+    </header>
 
-      <!-- Magazine name and publication date -->
-      <div class="publication-info">
-        <p>
-          <a id="homepage-link" href="index.html">Varich Journal</a> • October
-          5, 2023
+    <header class="header-burger">
+      <img src="fig/logo2.png" alt="Varich Journal" width="60" />
+      <a href="#menu" class="burger-item-open"
+        ><svg
+          viewBox="-1.2 -1.2 14.40 14.40"
+          enable-background="new 0 0 12 12"
+          id="item1"
+          version="1.1"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          fill="#ffffff"
+          stroke="#ffffff"
+          stroke-width="0.00012000000000000002"
+        >
+          <g
+            id="SVGRepo_bgCarrier1"
+            stroke-width="0"
+            transform="translate(0,0), scale(1)"
+          ></g>
+          <g
+            id="SVGRepo_tracerCarrier1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke="#CCCCCC"
+            stroke-width="0.024"
+          ></g>
+          <g id="SVGRepo_iconCarrier2">
+            <g>
+              <rect fill="#ffffff" height="1" width="11" x="0.5" y="5.5"></rect>
+              <rect fill="#ffffff" height="1" width="11" x="0.5" y="2.5"></rect>
+              <rect fill="#ffffff" height="1" width="11" x="0.5" y="8.5"></rect>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </header>
+
+    <nav id="menu" class="navbar">
+      <a href="#home" class="burger-item-close"
+        ><svg
+          viewBox="-1.32 -1.32 14.64 14.64"
+          enable-background="new 0 0 12 12"
+          id="item2"
+          version="1.1"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          fill="#000000"
+          stroke="#000000"
+          stroke-width="0.00012000000000000002"
+        >
+          <g
+            id="SVGRepo_bgCarrier2"
+            stroke-width="0"
+            transform="translate(0,0), scale(1)"
+          ></g>
+          <g
+            id="SVGRepo_tracerCarrier2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke="#CCCCCC"
+            stroke-width="1.152"
+          ></g>
+          <g id="SVGRepo_iconCarrier1">
+            <polygon
+              fill="#000000"
+              points="12,0.7070313 11.2929688,0 6,5.2929688 0.7070313,0 0,0.7070313 5.2929688,6 0,11.2929688 0.7070313,12 6,6.7070313 11.2929688,12 12,11.2929688 6.7070313,6 "
+            ></polygon>
+          </g></svg
+      ></a>
+      <ul>
+        <li><a class="nav-home-link" href="index.html">JOURNAL</a></li>
+        <li>
+          <a class="nav-technology-link" href="technology.html">TECHNOLOGY</a>
+        </li>
+        <li><a class="nav-finance-link" href="finance.html">FINANCE</a></li>
+        <li><a class="nav-culture-link" href="culture.html">CULTURE</a></li>
+        <li><a class="nav-style-link" href="style.html">STYLE</a></li>
+        <li><a class="nav-health-link" href="health.html">HEALTH</a></li>
+        <li><a class="nav-sport-link" href="sport.html">SPORT</a></li>
+        <li>
+          <a class="nav-nutrition-link" href="nutrition.html">NUTRITION</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Wrapper -->
+    <main class="main-page">
+      <!-- Header Part Name Article -->
+      <div id="#home">
+        <h1 class="name-article">
+          Sleep and Health: Tips and Strategies for Better Sleep
+        </h1>
+
+        <!-- Magazine name and publication date -->
+        <p class="publication-info">
+          <a id="homepage-link" target="_blank" href="index.html"
+            >Varich Journal</a
+          >
+          • December 27, 2023
         </p>
       </div>
-    </div>
+
+      <!-- Article Part -->
+      <article>
+        <!-- 1 Photo: Sleep -->
+        <img
+          class="image-part"
+          src="fig/sleep_health_img1.png"
+          sizes="(max-width: 360px) 280px, (max-width: 480px) 440px, 800px"
+          alt="Sleep"
+        />
+
+        <!-- Materials -->
+        <div class="article-content">
+          <p class="products-discription">
+            Turkey contains protein and several vitamins and minerals, such as
+            riboflavin and phosphorus. It is also rich in the amino acid
+            tryptophan, which promotes the production of melatonin. Fatty fish
+            such as salmon, tuna, trout and mackerel are extremely beneficial
+            due to their vitamin D content and omega-3 fatty acids, particularly
+            EPA and DHA. The combination of omega-3 fatty acids and vitamin D in
+            oily fish can have a positive effect on sleep quality, as both have
+            been shown to promote serotonin production. Eating a few grams of
+            turkey or fatty fish before bed can help you fall asleep faster and
+            sleep more deeply, including fewer awakenings during the night.
+          </p>
+          <p>
+            <b>Circadian rhythms</b> are natural biological fluctuations that
+            occur roughly every 24 hours and regulate various physiological
+            processes in the body. One of the main circadian rhythms is the
+            sleep-wake cycle, which is controlled by an internal clock. These
+            rhythms synchronize with the external environment, ensuring an
+            optimal balance of activity and rest throughout the day, and they
+            are essential for maintaining health and good-quality sleep.
+          </p>
+          <p>
+            <b>Sleep stages</b> are different phases characterized by varying
+            depths and levels of activity. Sleep is typically divided into four
+            stages: the falling asleep stage, which is the transition from
+            wakefulness to sleep and lasts a few minutes; the light sleep stage,
+            during which consciousness decreases and lasts about 20 minutes; the
+            deep sleep stage, which is hard to wake from and important for
+            physical recovery, lasting over 30 minutes; and the REM stage (rapid
+            eye movement), the dreaming phase, which is vital for mental
+            recovery and occurs several times a night, with increasing duration.
+            The body goes through all these stages approximately 4 to 6 times
+            per night, with each cycle lasting 90 to 110 minutes. A full night
+            of sleep usually consists of several such cycles, totaling around 7
+            to 9 hours.
+          </p>
+          <p>
+            <b>Melatonin</b> is a hormone that regulates circadian rhythms and
+            helps control sleep and wake cycles. Its level increases in darkness
+            and decreases in light, signaling the body that it’s time to sleep.
+            Melatonin plays an important role in dream regulation and affects
+            sleep quality and the body’s recovery processes.
+          </p>
+          <p>
+            <b
+              >In this article, the tips are divided into several categories.</b
+            >
+            Sleep schedule optimization involves having a regular routine for
+            healthy circadian rhythms and better sleep. Relaxation before sleep
+            includes techniques for calming the mind and making it easier to
+            fall asleep. Nutrition and supplements refer to how food and
+            supplements affect sleep quality. Sleep environment organization
+            means creating a supportive space, taking into account lighting and
+            setup.
+          </p>
+        </div>
+
+        <img
+          class="image-part"
+          src="fig/sleep_health_img2.png"
+          sizes="(max-width: 360px) 280px, (max-width: 480px) 440px, 800px"
+          alt="Eat"
+        />
+
+        <!-- Product List -->
+        <div>
+          <!-- Main Dishes -->
+          <div>
+            <!-- Header name 1-->
+            <h3 class="products-header" id="main-dishes-header">
+              Sleep Schedule Optimization:
+            </h3>
+
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Reduce blue light exposure in the evening.</b> While light
+                  exposure during the day is beneficial, at night it has the
+                  opposite effect. This is because it influences the circadian
+                  rhythm, tricking the brain into thinking it’s still daytime.
+                  As a result, it lowers the levels of hormones like melatonin,
+                  which help you relax and enter deep sleep. Blue light is
+                  mainly emitted in large amounts by lamps and electronic
+                  devices such as smartphones and computers, making them the
+                  worst offenders in this regard. There are several popular
+                  methods to reduce blue light exposure at night. These include
+                  using dim red lighting as night illumination, which is less
+                  likely to shift the circadian rhythm and suppress melatonin;
+                  wearing glasses that block blue light; stopping screen use two
+                  to three hours before bed; or installing apps like <a class='additional-link' href="https://www.microsoft.com/sk-sk/p/flux/9n9kdphv91jt">f.lux</a> to
+                  block blue light on your laptop or computer, as well as blue
+                  light filter apps for your smartphone.</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Reduce irregular or prolonged daytime naps.</b> Short naps
+                  lasting 30 minutes or less can be beneficial, but long or
+                  irregular naps may negatively affect your sleep. They can
+                  disrupt your internal clock, making it harder to fall asleep
+                  at night. However, if you already have a consistent and
+                  restful night sleep, there’s no need to worry about daytime
+                  rest. Sleep effectiveness is individual, and if you experience
+                  difficulty falling asleep at night, consider limiting the
+                  timing or shortening the duration of your daytime naps.</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b
+                    >Stick to a consistent sleep schedule by going to bed and
+                    waking up at the same time each day.</b
+                  >
+                  Your circadian rhythm, which aligns with sunrise and sunset,
+                  supports better sleep quality. Following a regular routine can
+                  positively affect the duration and quality of your sleep,
+                  reducing the risk of disrupting your circadian rhythm and
+                  melatonin levels. If you have trouble falling asleep, try
+                  creating a routine with consistent wake-up and bedtime hours —
+                  over time, this can become a natural habit that doesn’t even
+                  require an alarm.</span
+                >
+              </li>
+            </ol>
+          </div>
+
+          <!-- Dairy products -->
+          <div>
+            <!-- Header name 1-->
+            <h3 class="products-header" id="main-dishes-header">
+              Relaxation before sleep:
+            </h3>
+
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Take a relaxing bath or shower.</b> Scientific studies
+                  have confirmed that this can improve sleep quality and help
+                  people, especially older adults, fall asleep faster. One study
+                  found that taking a hot bath 90 minutes before bed enhances
+                  sleep quality and promotes deeper sleep. It’s also worth
+                  noting that a cold shower before sleep can contribute to
+                  deeper and more restful rest. However, it’s important to
+                  remember that extremely hot or cold showers are not
+                  recommended for people with heart conditions. Experiment and
+                  find the optimal time and type of water therapy that works
+                  best for you to support healthy sleep.</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Relax and clear your mind in the evening.</b> Try
+                  different strategies such as listening to calming music,
+                  reading a book, getting a massage, taking a hot bath,
+                  meditating, practicing deep breathing, or visualizing peaceful
+                  scenes before bed. You can also consider taking a short walk
+                  outdoors in the fresh air, which may help you relax and
+                  improve your sleep quality. For even faster sleep, try the
+                  U.S. Army sleep <a class="additional-link" href="https://www.tiktok.com/@justin_agustin/video/7054744760099130629">method</a>: close your eyes and begin the
+                  relaxation process. Breathe deeply and slowly, focusing on
+                  each inhale and exhale. Pay attention to every part of your
+                  body—from head to toe—gradually relaxing each one. Use
+                  visualization techniques by imagining yourself in a calm
+                  place, or repeat the words “don’t think” for a few seconds to
+                  help quiet the mind.</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Avoid sleep disruptions.</b> It’s important to mute
+                  notifications or enable “Do Not Disturb” mode to prevent
+                  unexpected alerts. Remember that smartphones emit
+                  electromagnetic waves, which can affect sleep quality. As an
+                  alternative, use night mode and consider using wireless
+                  headphones to listen to relaxing music or meditation tracks.
+                  This can help create a calming atmosphere for falling asleep
+                  and improve your overall sleep quality.</span
+                >
+              </li>
+            </ol>
+          </div>
+
+          <!-- Dairy products -->
+          <div>
+            <!-- Header name 1-->
+            <h3 class="products-header" id="main-dishes-header">
+              Nutrition and Supplements:
+            </h3>
+
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Avoid consuming alcohol and caffeine before bedtime.</b>
+                  While caffeine can be helpful for boosting focus and energy,
+                  having it late in the day can harm your sleep. Research shows
+                  that consuming caffeine even 6 hours before sleep can reduce
+                  sleep quality. Its effects can last 6 to 8 hours, so it's best
+                  to avoid large amounts after 3–4 PM, especially for those
+                  sensitive to caffeine or experiencing sleep issues. As for
+                  alcohol, it can trigger sleep apnea, disrupt your sleep cycle,
+                  and reduce melatonin production. To maintain a healthy
+                  circadian rhythm and proper biological processes, it's
+                  important to avoid alcohol before bed.</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Limit heavy meals before bedtime.</b> Eating late at night
+                  can negatively affect sleep quality and the natural release of
+                  growth hormone (HGH) and melatonin. It's important to avoid
+                  large portions before sleeping, as they may lead to poor sleep
+                  and hormonal imbalance. Instead, choosing light and healthy
+                  snacks a few hours before bed can help improve sleep
+                  quality.</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Avoid drinking too much liquid before bedtime</b>, as
+                  frequent nighttime urination—known as nocturia—can negatively
+                  impact sleep quality and reduce your energy during the day.
+                  It’s recommended to limit fluid intake, especially within 1–2
+                  hours before going to bed, to reduce the risk of these
+                  symptoms. Additionally, using the bathroom before sleep can
+                  help lower the chances of waking up at night and improve
+                  overall sleep quality.</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Take supplements such as melatonin and others.</b>
+                  Melatonin, the key sleep hormone, helps regulate your sleep
+                  cycle and signals the brain when it's time to rest. In some
+                  countries, melatonin requires a prescription, while in others
+                  it’s widely available in stores or online. The recommended
+                  dose is typically 1–5 mg taken 30–60 minutes before bedtime.
+                  Other effective supplements include glycine (3 g), valerian
+                  root (500 mg before bed), magnesium, L-theanine (100–200 mg
+                  before bed), and lavender (80–160 mg). These can help enhance
+                  relaxation and sleep quality. It’s important to try these
+                  supplements one at a time and consider combining them with
+                  other natural strategies to support healthy sleep.</span
+                >
+              </li>
+            </ol>
+          </div>
+          <!-- Dairy products -->
+          <div>
+            <!-- Header name 1-->
+            <h3 class="products-header" id="main-dishes-header">
+              Bedroom Organization:
+            </h3>
+
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Create a sleep-friendly environment.</b> Many people find that
+                  the bedroom’s atmosphere and setup are key factors for a good
+                  night’s sleep. To optimize your bedroom conditions, try to
+                  reduce outside noise, especially from traffic, control
+                  lighting, and avoid artificial light from devices like alarm
+                  clocks. Consider using earplugs to further block external
+                  sounds and sleep masks to block out light. Make sure your
+                  bedroom is quiet, calm, clean, and comfortable.</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Maintain an optimal bedroom temperature.</b> Take care to keep
+                  the temperature in your bedroom at a comfortable level, as
+                  scientific studies show it significantly affects sleep
+                  quality. Experiment with different temperatures, but around
+                  20°C (68°F) is considered ideal for most people, promoting
+                  calm and restful sleep.</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  ><b>Ensure a comfortable sleeping space.</b> New bedding can improve
+                  sleep quality. Additionally, low-quality bedding may worsen
+                  back pain. Choosing the best mattress and bedding is very
+                  personal. When updating your bedding, follow your own
+                  preferences. It is recommended to replace bedding at least
+                  every 5–8 years.</span
+                >
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- 3 Part: Author's words -->
+        <img
+          class="image-part"
+          src="fig/sleep_health_img3.png"
+          sizes="(max-width: 360px) 280px, (max-width: 480px) 440px, 800px"
+          alt="Notes"
+          width="1080"
+        />
+
+        <!-- Author's words -->
+        <p class="author-text">
+          In this issue, we explored the theoretical aspect of sleep, delving
+          deeper into the nature of circadian rhythms, the stages of sleep, and
+          the vital role of melatonin. We then outlined a series of practical
+          tips and strategies aimed at improving sleep quality. It's also
+          important to note that physical activity has a positive effect on
+          sleep quality. However, it is better to exercise during the day rather
+          than before bedtime to enhance nighttime rest. In my daily routine, I
+          will incorporate several effective practices to improve my sleep.
+          These include using a computer program to filter blue light, taking
+          regular contrast showers to clear the mind, applying the U.S. Army’s
+          military sleep method to fall asleep faster, turning off my phone
+          during sleep to avoid notifications and electromagnetic waves, and
+          maintaining a consistent sleep schedule—going to bed and waking up at
+          the same time every day. I will also read books before bed and limit
+          my intake of food and water in the evening to enhance sleep quality.
+          In the next article, we will examine foods that may increase the risk
+          of cancer and provide advice on how to avoid it. In writing this
+          article, I used information from various online sources, with
+          Healthline being the primary reference. Additional insights and
+          support came from BetterUp, which discussed the benefits of hot and
+          cold showers. I also took into account data from
+          <a class="additional-link" href="https://www.health.harvard.edu/"
+            >Harvard Health</a
+          >, which offered extensive information on sleep and how to improve it.
+          Stay tuned to the
+          <a
+            class="additional-link"
+            href="https://t.me/Ministerstvo_Kharchuvannya"
+            >“Ministry of Nutrition”</a
+          >
+          channel for exciting articles and the most delicious recipes!
+        </p>
+      </article>
+
+      <!-- Footer Part -->
+      <footer class="additional-info">
+        <!-- Additional information -->
+        <hr />
+        <p>
+          Sources:
+          <a
+            target="_blank"
+            class="additional-link"
+            href="https://www.healthline.com/nutrition/17-tips-to-sleep-better"
+            >healthline</a
+          >,
+          <a
+            target="_blank"
+            class="additional-link"
+            href="https://www.betterup.com/blog/cold-or-hot-shower-before-bed#:~:text=Sleep%20quality%3A%20Some%20people%20find,nights%20or%20in%20hot%20climates."
+            >betterup</a
+          >
+        </p>
+
+        <!-- Tags -->
+        <p>Tags: <a class="additional-link">#Health</a></p>
+
+        <!-- Recommendations -->
+        <p>
+          Recommendations:
+          <a href="article1.html" class="additional-link"
+            >Which Products Help You Get a Good Sleep</a
+          >,
+          <a href="article3.html" class="additional-link"
+            >Foods that Promote Cancer and How to Avoid Exposure</a
+          >
+        </p>
+
+        <!-- Rights Reserved Animatoion -->
+        <p class="p-reserved">
+          All rights reserved © 2023 Varich Journal. All content, images, and
+          materials on this website are protected by copyright.
+        </p>
+      </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      const hideNav = () => {
+        const hiddenNavClassName = "navigation__hidden";
+        const fixedNavClassName = "navigation__fixed";
+        const screenWidth = window.innerWidth;
+        var headerHeight = 80;
+        var navHeight = 42;
+        if (screenWidth <= 768) {
+          headerHeight = -60;
+          navHeight = 60;
+        }
+
+        let initialYvalue = window.scrollY;
+        let body = document.querySelector("body");
+
+        let isItHidden = false;
+        let isItFixed = false;
+
+        window.addEventListener("scroll", (ev) => {
+          const scrollY = window.scrollY;
+          if (scrollY > headerHeight) {
+            makeItFixed();
+
+            if (scrollY > headerHeight + navHeight && scrollY > initialYvalue) {
+              hide();
+            } else {
+              show();
+            }
+          } else {
+            makeItNotFixed();
+          }
+
+          initialYvalue = scrollY;
+        });
+
+        function hide() {
+          if (!isItHidden) {
+            body.classList.add(hiddenNavClassName);
+            isItHidden = true;
+          }
+        }
+
+        function show() {
+          if (isItHidden) {
+            body.classList.remove(hiddenNavClassName);
+            isItHidden = false;
+          }
+        }
+
+        function makeItFixed() {
+          if (!isItFixed) {
+            body.classList.add(fixedNavClassName);
+            isItFixed = true;
+          }
+        }
+
+        function makeItNotFixed() {
+          if (isItFixed) {
+            body.classList.remove(fixedNavClassName);
+            isItFixed = false;
+          }
+        }
+      };
+
+      hideNav();
+
+      $(document).ready(function () {
+        $("#myButton").click(function () {
+          $(this).toggleClass("active");
+        });
+      });
+
+      // Navbar Menu for Phone Model
+      function enableBodyScroll() {
+        document.body.style.overflow = "auto";
+      }
+
+      function disableBodyScroll() {
+        document.body.style.overflow = "hidden";
+      }
+
+      window.addEventListener("hashchange", function () {
+        const currentHash = window.location.hash;
+
+        if (currentHash === "#menu") {
+          disableBodyScroll();
+        } else {
+          enableBodyScroll();
+        }
+      });
+
+      const form = document.getElementById("Formular");
+
+      form.addEventListener("submit", function (event) {
+        var myElement = document.getElementById(".invalid-input");
+        myElement.style.display = "block";
+
+        var myCommentElement = document.getElementById(
+          ".text-field input:invalid"
+        );
+        myCommentElement.style.borderColor = "#dc161c";
+      });
+    </script>
   </body>
 </html>

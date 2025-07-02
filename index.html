@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="screenStyle.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/screenStyle.css" />
     <link rel="stylesheet" type="text/css" href="public/css/printStyle.css" />
     <!-- Favicon -->
     <link
@@ -200,7 +200,7 @@
         </h2>
         <div id="menuIts" class="index-links">
           <a
-            href="#articles/1/10"
+            href="#articles/1/20"
             id="link1"
             class="overlay-link"
             data-link-id="link1"
@@ -223,15 +223,6 @@
             onclick="activateLink('link0')"
             >JOURNAL</a
           >
-          <a
-            href="#addComment"
-            id="link4"
-            class="overlay-link"
-            data-link-id="link4"
-            onclick="activateLink('link4')"
-            >+ ADD COMMENT</a
-          >
-          
         </div>
       </div>
     </div>
@@ -325,6 +316,42 @@
             </svg>
           </div>
         </div>
+        <div
+          id="g_id_onload"
+          data-client_id="111682344217-59e3v2h5767o4ollio0k3decj7gkr05t.apps.googleusercontent.com"
+          data-callback="handleCredentialResponse"
+          data-auto_prompt="false"
+        ></div>
+
+        <div
+          id="googleButton"
+          class="g_id_signin"
+          data-type="standard"
+          data-size="large"
+          data-theme="outline"
+          data-text="sign_in_with"
+          data-shape="rectangular"
+          data-logo_alignment="left"
+        ></div>
+        <div id="loginInfo" style="display: none">
+          <!-- <img
+            src="svg/user-alt-svgrepo-com.svg"
+            alt="user icon"
+            style="width: 36px; height: 36px"
+          /> -->
+          <span id="UserName"></span>
+          <button style="display: none" id="logoutBtn" onclick="logout()">
+            (Sign Out)
+          </button>
+        </div>
+        <a
+          href="#artInsert"
+          id="link5"
+          class="overlay-link"
+          data-link-id="link5"
+          onclick="activateLink('link5')"
+          >+ ADD ARTICLE</a
+        >
       </article>
     </template>
 
@@ -353,18 +380,50 @@
         <article>
           <section class="articles-section">
             <div class="articles-profile">
-              <div class="articles-block">
-                <h4>
-                  <span class="articles-name">{{articles.title}}</span>
-                </h4>
-                <p style="color: #959595">by {{articles.author}}</p>
+              <div style="display: flex; flex-direction: column; gap: 20px">
+                <div class="articles-block">
+                  <h4>
+                    <a class="articles-name" href="#article/{{id}}"
+                      >{{title}}</a
+                    >
+                  </h4>
+                  <p style="color: #959595">by {{author}}</p>
+                  <p style="color: #959595">{{dateCreated}}</p>
+                  <p style="color: #959595">{{tags}}</p>
+                </div>
+                <div class="articles-btn">
+                  <a href="#artEdit/{{id}}">Edit</a>
+                  <button onclick="deleteThisArticle(event)" data-id="{{id}}">
+                    Delete
+                  </button>
+                  <a href="#addArtComment/{{id}}">Add Comment</a>
+                </div>
               </div>
+
               <img
-                src="{{articles.imageLink}}"
+                src="{{imageLink}}"
                 alt="avatar"
-                width="32px"
-                height="32px"
+                width="256px"
+                height="256px"
               />
+            </div>
+            <div class="artcomment-sections">
+              {{#comments}}
+              <div class="artcomment-section">
+                <div class="artcomment-profile">
+                  <img
+                    src="{{avatar}}"
+                    alt="avatar"
+                    width="16px"
+                    height="16px"
+                  />
+                  <p>{{author}}</p>
+                </div>
+                <p style="margin-left: 20px">{{text}}</p>
+              </div>
+              {{/comments}} {{^comments}}
+              <p style="color: #888; font-style: italic; margin: 50px auto;">Not comment yet</p>
+              {{/comments}}
             </div>
           </section>
         </article>
@@ -452,6 +511,14 @@
           </svg>
         </div>
       </div>
+      <a
+        href="#addComment"
+        id="link4"
+        class="overlay-link"
+        data-link-id="link4"
+        onclick="activateLink('link4')"
+        >+ ADD COMMENT</a
+      >
     </template>
 
     <template id="template-addComment">
@@ -612,7 +679,414 @@
         </div>
       </article>
     </template>
+    <template id="template-addArticle">
+      <article id="artOpnFrm">
+        <div class="Formular" style="width: 100vw">
+          <form id="articleForm">
+            <div class="form-article-class-castom-1">
+              <div class="header-form-field">
+                <h2 style="margin-right: 125px; margin-bottom: 0">
+                  {{formTitle}}
+                </h2>
+              </div>
+              <div class="form-article-class-castom-2">
+                <div class="form-field" style="gap: 80px">
+                  <div
+                    class="first-part-field"
+                    style="margin-left: 0; margin-top: 25px"
+                  >
+                    <div class="text-field">
+                      <div class="name-text-field">
+                        <label for="author_name">
+                          <input
+                            type="text"
+                            id="author_name"
+                            name="author_name"
+                            value="{{author}}"
+                            aria-label="none"
+                            title="none"
+                            required
+                            oninvalid="event.preventDefault();"
+                            oninput="validateInput(this);"
+                            onfocus="markTouched(this);"
+                            onblur="validateOnBlur(this);"
+                            data-validation-message="Please enter author name"
+                            placeholder="Author"
+                          />
+                          <span class="invalid-input"
+                            >Please enter author name</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                    <div class="text-field">
+                      <label for="title_name">
+                        <input
+                          style="width: 200px"
+                          type="text"
+                          id="title_name"
+                          name="title_name"
+                          value="{{title}}"
+                          aria-label="none"
+                          title="none"
+                          required
+                          oninvalid="event.preventDefault();"
+                          oninput="validateInput(this);"
+                          onfocus="markTouched(this);"
+                          onblur="validateOnBlur(this);"
+                          data-validation-message="Please enter title name"
+                          placeholder="Title"
+                        />
+                        <span class="invalid-input"
+                          >Please enter title name</span
+                        >
+                      </label>
+                    </div>
+                    <div class="text-field">
+                      <label for="photo">
+                        <input
+                          style="width: 200px"
+                          type="text"
+                          id="photo"
+                          value="{{imageLink}}"
+                          name="photo"
+                          onfocus="markTouched(this)"
+                          placeholder="PHOTO's URL-LINK"
+                        />
+                      </label>
+                    </div>
+                    <div
+                      id="upload-container"
+                      style="margin-top: 15px; height: 30px"
+                    >
+                      <label for="upload" id="upload-label" class="upload-btn"
+                        >Upload Image</label
+                      >
+                      <input
+                        type="file"
+                        id="upload"
+                        accept="image/*"
+                        style="display: none"
+                        onchange="handleFileSelect(event)"
+                      />
+                    </div>
+                  </div>
 
+                  <div
+                    class="second-part-field"
+                    style="margin-left: 0; position: static"
+                  >
+                    <datalist id="categories">
+                      <option value="Journal"></option>
+                      <option value="Technology"></option>
+                      <option value="Finance"></option>
+                      <option value="Culture"></option>
+                      <option value="Style"></option>
+                      <option value="Health"></option>
+                      <option value="Sport"></option>
+                      <option value="Nutrition"></option>
+                    </datalist>
+                    <div class="second-part-second-field">
+                      <div class="input-field">
+                        <input
+                          type="search"
+                          id="tag"
+                          name="tag"
+                          value="{{tags}}"
+                          list="categories"
+                          placeholder="Journal"
+                        />
+                      </div>
+
+                      <div class="textarea-field">
+                        <label for="content">
+                          <textarea
+                            name="content"
+                            id="content"
+                            cols="63"
+                            rows="7"
+                            maxlength="79"
+                            placeholder="Add a content..."
+                            required
+                            oninvalid="event.preventDefault();"
+                            oninput="validateInput(this);"
+                            onfocus="markTouched(this);"
+                            onblur="validateOnBlur(this);"
+                          >
+{{content}}</textarea
+                          >
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="button-form"
+                  style="justify-content: flex-start; row-gap: 20px"
+                >
+                  <button
+                    type="submit"
+                    style="margin-left: 0; margin-top: 0px"
+                    onclick="submitForm()"
+                  >
+                    {{submitBtTitle}}
+                  </button>
+                  <button
+                    type="reset"
+                    style="margin-left: 0; margin-top: 0px"
+                    onclick="resetForm()"
+                  >
+                    Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </article>
+    </template>
+    <template id="template-showArticle">
+      <div class="background"></div>
+      <header class="header-logo">
+        <button id="myButton">Subscribe</button>
+        <img src="fig/logo.png" alt="Varich Journal" width="80" />
+      </header>
+
+      <header class="header-burger">
+        <img src="fig/logo2.png" alt="Varich Journal" width="60" />
+        <a href="#menu" class="burger-item-open"
+          ><svg
+            viewBox="-1.2 -1.2 14.40 14.40"
+            enable-background="new 0 0 12 12"
+            id="item1"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            fill="#ffffff"
+            stroke="#ffffff"
+            stroke-width="0.00012000000000000002"
+          >
+            <g
+              id="SVGRepo_bgCarrier1"
+              stroke-width="0"
+              transform="translate(0,0), scale(1)"
+            ></g>
+            <g
+              id="SVGRepo_tracerCarrier1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke="#CCCCCC"
+              stroke-width="0.024"
+            ></g>
+            <g id="SVGRepo_iconCarrier2">
+              <g>
+                <rect
+                  fill="#ffffff"
+                  height="1"
+                  width="11"
+                  x="0.5"
+                  y="5.5"
+                ></rect>
+                <rect
+                  fill="#ffffff"
+                  height="1"
+                  width="11"
+                  x="0.5"
+                  y="2.5"
+                ></rect>
+                <rect
+                  fill="#ffffff"
+                  height="1"
+                  width="11"
+                  x="0.5"
+                  y="8.5"
+                ></rect>
+              </g>
+            </g></svg
+        ></a>
+      </header>
+
+      <nav id="menu" class="navbar" style="width: 100vw">
+        <a href="#home" class="burger-item-close"
+          ><svg
+            viewBox="-1.32 -1.32 14.64 14.64"
+            enable-background="new 0 0 12 12"
+            id="item2"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            fill="#000000"
+            stroke="#000000"
+            stroke-width="0.00012000000000000002"
+          >
+            <g
+              id="SVGRepo_bgCarrier2"
+              stroke-width="0"
+              transform="translate(0,0), scale(1)"
+            ></g>
+            <g
+              id="SVGRepo_tracerCarrier2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke="#CCCCCC"
+              stroke-width="1.152"
+            ></g>
+            <g id="SVGRepo_iconCarrier1">
+              <polygon
+                fill="#000000"
+                points="12,0.7070313 11.2929688,0 6,5.2929688 0.7070313,0 0,0.7070313 5.2929688,6 0,11.2929688 0.7070313,12 6,6.7070313 11.2929688,12 12,11.2929688 6.7070313,6 "
+              ></polygon>
+            </g></svg
+        ></a>
+        <ul>
+          <li><a class="nav-home-link" href="index.html">JOURNAL</a></li>
+          <li>
+            <a class="nav-technology-link" href="technology.html">TECHNOLOGY</a>
+          </li>
+          <li><a class="nav-finance-link" href="finance.html">FINANCE</a></li>
+          <li><a class="nav-culture-link" href="culture.html">CULTURE</a></li>
+          <li><a class="nav-style-link" href="style.html">STYLE</a></li>
+          <li><a class="nav-health-link" href="health.html">HEALTH</a></li>
+          <li><a class="nav-sport-link" href="sport.html">SPORT</a></li>
+          <li>
+            <a class="nav-nutrition-link" href="nutrition.html">NUTRITION</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="main-page">
+        <!-- Header Part Name Article -->
+        <div id="#home">
+          <h1 class="name-article" style="color: black">{{title}}</h1>
+
+          <!-- Magazine name and publication date -->
+          <p class="publication-info">
+            <a id="homepage-link" target="_blank" href="index.html"
+              >{{author}}</a
+            >
+            • {{dateCreated}}
+          </p>
+        </div>
+
+        <!-- Article Part -->
+        <article>
+          <!-- 1 Photo: Sleep -->
+          <img class="image-part" src="{{imageLink}}" alt="Photo" />
+
+          <!-- Materials -->
+          <div class="article-content"></div>
+          <p style="color: black" class="p_article">{{content}}</p>
+        </article>
+        <footer class="additional-info">
+          <!-- Additional information -->
+          <hr />
+          <!-- Tags -->
+          <p style="color: black">
+            Tags:
+            <a class="additional-link" style="text-decoration: none"
+              >{{tags}}</a>
+          </p>
+          <!-- Rights Reserved Animatoion -->
+          <p class="p-reserved">
+            All rights reserved © 2023 Varich Journal. All content, images, and
+            materials on this website are protected by copyright.
+          </p>
+        </footer>
+      </main>
+    </template>
+    <template id="template-addArtComment">
+      <article id="artOpnFrm">
+        <div class="Formular" style="width: 100vw">
+          <form id="articleForm">
+            <div
+              class="form-article-class-castom-1"
+              style="align-items: center; margin-left: -14%; margin-top: -12%"
+            >
+              <div class="header-form-field">
+                <h2 style="margin-bottom: 15px">{{formTitle}}</h2>
+              </div>
+              <div class="form-article-class-castom-2">
+                <div class="form-field" style="flex-direction: column">
+                  <div class="first-part-field" style="margin-left: 0">
+                    <div class="text-field">
+                      <div class="name-text-field">
+                        <label for="author_name">
+                          <input
+                            type="text"
+                            id="author_name"
+                            name="author_name"
+                            value="{{author}}"
+                            aria-label="none"
+                            title="none"
+                            required
+                            oninvalid="event.preventDefault();"
+                            oninput="validateInput(this);"
+                            onfocus="markTouched(this);"
+                            onblur="validateOnBlur(this);"
+                            data-validation-message="Please enter author name"
+                            placeholder="Author"
+                          />
+                          <span class="invalid-input"
+                            >Please enter author name</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="second-part-field"
+                    style="margin-left: 0; position: static"
+                  >
+                    <div class="textarea-field">
+                      <label for="comment">
+                        <textarea
+                          name="comment"
+                          id="comment"
+                          cols="63"
+                          rows="7"
+                          maxlength="79"
+                          placeholder="Add a comment..."
+                          required
+                          oninvalid="event.preventDefault();"
+                          oninput="validateInput(this);"
+                          onfocus="markTouched(this);"
+                          onblur="validateOnBlur(this);"
+                        >
+{{comment}}</textarea
+                        >
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="button-form"
+                style="justify-content: flex-start; row-gap: 20px"
+              >
+                <button
+                  type="submit"
+                  style="margin-left: 0; margin-top: 0px"
+                  onclick="submitForm()"
+                >
+                  {{submitBtTitle}}
+                </button>
+                <button
+                  type="reset"
+                  style="margin-left: 0; margin-top: 0px"
+                  onclick="resetForm()"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </article>
+    </template>
     <script>
       document.querySelectorAll(".index-links a").forEach(function (link) {
         link.addEventListener("click", function () {
@@ -628,7 +1102,6 @@
         });
       });
     </script>
-
     <script>
       function toggleInvalidStyle(input) {
         const invalidInput =
@@ -698,10 +1171,203 @@
         });
       }
     </script>
+    <!-- GOOGLE SIGN IN -->
+    <script>
+      function handleCredentialResponse(response) {
+        const data = jwt_decode(response.credential);
+        console.log("User from Google:", data);
+        document.getElementById("loginInfo").style.display = "flex";
+        document.getElementById("UserName").innerText = data.name;
+        localStorage.setItem("userName", data.name);
+        userName = localStorage.getItem("userName");
+        console.log("User from localStorage 0:", userName);
+        document.getElementById("logoutBtn").style.display = "block";
+        document.querySelector(".g_id_signin").style.display = "none";
+      }
+    </script>
+    <script>
+      function logout() {
+        google.accounts.id.disableAutoSelect();
+        localStorage.removeItem("userName");
+        updateLoginUI();
+        renderGoogleSignInIfNeeded();
+      }
+    </script>
+    <script>
+      window.addEventListener("DOMContentLoaded", updateLoginUI);
+      function updateLoginUI() {
+        const userName = localStorage.getItem("userName");
+        const loginInfo = document.getElementById("loginInfo");
+        const logoutBtn = document.getElementById("logoutBtn");
+        const googleSignin = document.querySelector(".g_id_signin");
+        const userNameElm = document.getElementById("UserName");
 
+        if (userName) {
+          if (loginInfo) loginInfo.style.display = "flex";
+          if (logoutBtn) logoutBtn.style.display = "block";
+          if (googleSignin) googleSignin.style.display = "none";
+          if (userNameElm) userNameElm.innerText = userName;
+        } else {
+          if (loginInfo) loginInfo.style.display = "none";
+          if (logoutBtn) logoutBtn.style.display = "none";
+          if (googleSignin) googleSignin.style.display = "block";
+          if (userNameElm) userNameElm.innerText = "";
+        }
+      }
+    </script>
+    <script>
+      function renderGoogleSignInIfNeeded() {
+        if (!localStorage.getItem("userName")) {
+          const btn = document.getElementById("googleButton");
+          if (btn && btn.childNodes.length === 0) {
+            google.accounts.id.renderButton(btn, {
+              theme: "outline",
+              size: "large",
+              text: "signin_with",
+            });
+          }
+        }
+      }
+    </script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script>
+      function handleFileSelect(event) {
+        const file = event.target.files[0];
+        const shortName = shortenFilename(file.name);
+        const container = document.getElementById("upload-container");
+
+        if (file) {
+          const fileDisplay = document.createElement("div");
+          fileDisplay.className = "file-name";
+          fileDisplay.innerHTML = `${shortName}<button class="remove-file" onclick="removeFile()">×</button>`;
+
+          container.innerHTML = "";
+          container.appendChild(fileDisplay);
+        }
+      }
+
+      function removeFile() {
+        const container = document.getElementById("upload-container");
+        container.innerHTML = `
+    <label for="upload" id="upload-label" class="upload-btn">Upload Image</label>
+    <input type="file" id="upload" accept="image/*" style="display: none" onchange="handleFileSelect(event)">
+  `;
+      }
+
+      function shortenFilename(filename, maxLength = 20) {
+        if (filename.length <= maxLength) return filename;
+
+        const dotIndex = filename.lastIndexOf(".");
+        const name = filename.substring(0, dotIndex);
+        const ext = filename.substring(dotIndex);
+
+        const start = name.substring(
+          0,
+          Math.floor((maxLength - ext.length - 3) / 2)
+        );
+        const end = name.substring(
+          name.length - Math.floor((maxLength - ext.length - 3) / 2)
+        );
+
+        return `${start}...${end}${ext}`;
+      }
+    </script>
+    <script>
+      function deleteThisArticle(event) {
+        const articleId = event.target.dataset.id;
+        if (!articleId) return;
+
+        fetch(`https://wt.kpi.fei.tuke.sk/api/article/${articleId}`, {
+          method: "DELETE",
+        })
+          .then((response) => {
+            if (response.ok) {
+              window.location.hash = "#articles/1/20"; 
+            } else {
+              alert("Failed to delete article.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error deleting article:", error);
+            alert("An error occurred.");
+          });
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      const hideNav = () => {
+        const hiddenNavClassName = "navigation__hidden";
+        const fixedNavClassName = "navigation__fixed";
+        const screenWidth = window.innerWidth;
+        var headerHeight = 80;
+        var navHeight = 42;
+        if (screenWidth <= 768) {
+          headerHeight = -60;
+          navHeight = 60;
+        }
+
+        let initialYvalue = window.scrollY;
+        let body = document.querySelector("body");
+
+        let isItHidden = false;
+        let isItFixed = false;
+
+        window.addEventListener("scroll", (ev) => {
+          const scrollY = window.scrollY;
+          if (scrollY > headerHeight) {
+            makeItFixed();
+
+            if (scrollY > headerHeight + navHeight && scrollY > initialYvalue) {
+              hide();
+            } else {
+              show();
+            }
+          } else {
+            makeItNotFixed();
+          }
+
+          initialYvalue = scrollY;
+        });
+
+        function hide() {
+          if (!isItHidden) {
+            body.classList.add(hiddenNavClassName);
+            isItHidden = true;
+          }
+        }
+
+        function show() {
+          if (isItHidden) {
+            body.classList.remove(hiddenNavClassName);
+            isItHidden = false;
+          }
+        }
+
+        function makeItFixed() {
+          if (!isItFixed) {
+            body.classList.add(fixedNavClassName);
+            isItFixed = true;
+          }
+        }
+
+        function makeItNotFixed() {
+          if (isItFixed) {
+            body.classList.remove(fixedNavClassName);
+            isItFixed = false;
+          }
+        }
+      };
+
+      hideNav();
+
+      $(document).on("click", "#myButton", function () {
+        $(this).toggleClass("active");
+      });
+    </script>
     <!--include mustache javascript-->
     <script src="js/mustache.min.js"></script>
-
     <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/articleFormsHandler.js"></script>
   </body>
 </html>

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="screenStyle.css" />
-    <link rel="stylesheet" type="text/css" href="public/css/printStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="public/css/screenStyle.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/printStyle.css" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -30,20 +32,1287 @@
     />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="theme-color" content="#000000" />
-    <title>HEALTH</title>
+
+    <title>
+      Cancer and Nutrition: Foods that Promote Cancer and How to Avoid Exposure
+    </title>
   </head>
   <body>
-    <!-- Main Wrapper -->
-    <div class="main-page">
-      <h1>Beauty and Nutrition: What products will help improve skin</h1>
+    <header class="header-logo">
+      <button id="myButton">Subscribe</button>
+      <img src="fig/logo.png" alt="Varich Journal" width="80" />
+    </header>
 
-      <!-- Magazine name and publication date -->
-      <div class="publication-info">
-        <p>
-          <a id="homepage-link" href="index.html">Varich Journal</a> • October
-          5, 2023
+    <header class="header-burger">
+      <img src="fig/logo2.png" alt="Varich Journal" width="60" />
+      <a href="#menu" class="burger-item-open"
+        ><svg
+          viewBox="-1.2 -1.2 14.40 14.40"
+          enable-background="new 0 0 12 12"
+          id="item1"
+          version="1.1"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          fill="#ffffff"
+          stroke="#ffffff"
+          stroke-width="0.00012000000000000002"
+        >
+          <g
+            id="SVGRepo_bgCarrier1"
+            stroke-width="0"
+            transform="translate(0,0), scale(1)"
+          ></g>
+          <g
+            id="SVGRepo_tracerCarrier1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke="#CCCCCC"
+            stroke-width="0.024"
+          ></g>
+          <g id="SVGRepo_iconCarrier2">
+            <g>
+              <rect fill="#ffffff" height="1" width="11" x="0.5" y="5.5"></rect>
+              <rect fill="#ffffff" height="1" width="11" x="0.5" y="2.5"></rect>
+              <rect fill="#ffffff" height="1" width="11" x="0.5" y="8.5"></rect>
+            </g>
+          </g></svg
+      ></a>
+    </header>
+
+    <nav id="menu" class="navbar">
+      <a href="#home" class="burger-item-close"
+        ><svg
+          viewBox="-1.32 -1.32 14.64 14.64"
+          enable-background="new 0 0 12 12"
+          id="item2"
+          version="1.1"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          fill="#000000"
+          stroke="#000000"
+          stroke-width="0.00012000000000000002"
+        >
+          <g
+            id="SVGRepo_bgCarrier2"
+            stroke-width="0"
+            transform="translate(0,0), scale(1)"
+          ></g>
+          <g
+            id="SVGRepo_tracerCarrier2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke="#CCCCCC"
+            stroke-width="1.152"
+          ></g>
+          <g id="SVGRepo_iconCarrier1">
+            <polygon
+              fill="#000000"
+              points="12,0.7070313 11.2929688,0 6,5.2929688 0.7070313,0 0,0.7070313 5.2929688,6 0,11.2929688 0.7070313,12 6,6.7070313 11.2929688,12 12,11.2929688 6.7070313,6 "
+            ></polygon>
+          </g></svg
+      ></a>
+      <ul>
+        <li><a class="nav-home-link" href="index.html">JOURNAL</a></li>
+        <li>
+          <a class="nav-technology-link" href="technology.html">TECHNOLOGY</a>
+        </li>
+        <li><a class="nav-finance-link" href="finance.html">FINANCE</a></li>
+        <li><a class="nav-culture-link" href="culture.html">CULTURE</a></li>
+        <li><a class="nav-style-link" href="style.html">STYLE</a></li>
+        <li><a class="nav-health-link" href="health.html">HEALTH</a></li>
+        <li><a class="nav-sport-link" href="sport.html">SPORT</a></li>
+        <li>
+          <a class="nav-nutrition-link" href="nutrition.html">NUTRITION</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Wrapper -->
+    <main class="main-page">
+      <!-- Header Part Name Article -->
+      <div id="#home">
+        <h1 class="name-article">
+          Cancer and Nutrition: Foods that Promote Cancer and How to Avoid
+          Exposure
+        </h1>
+
+        <!-- Magazine name and publication date -->
+        <p class="publication-info">
+          <a id="homepage-link" target="_blank" href="index.html"
+            >Varich Journal</a
+          >
+          • February 17, 2024
         </p>
       </div>
-    </div>
+
+      <!-- Article Part -->
+      <article>
+        <!-- 1 Photo: Sleep -->
+        <img
+          class="image-part"
+          src="fig/cancer_nutrition_img1.png"
+          sizes="(max-width: 360px) 280px, (max-width: 480px) 440px, 800px"
+          alt="Sleep"
+        />
+
+        <!-- Materials -->
+        <div class="article-content">
+          <p>
+            <b>Cancer</b> is a genetically caused disease characterized by the
+            uncontrolled division and spread of abnormal cells in the body.
+            Genetic mutations can result from DNA damage to cells or inherited
+            genetic defects, leading to disruptions in the mechanisms that
+            regulate cell division.
+          </p>
+          <p>
+            <b>Differences Between Healthy and Cancer Cells.</b> Normal and
+            cancer cells are both formed daily through the process of cell
+            division, which is necessary to replace damaged or old cells with
+            new ones. However, the difference lies in the fact that normal cells
+            have a limited number of divisions, known as the Hayflick limit,
+            which is about 52 divisions. Additionally, normal cells can undergo
+            apoptosis, a programmed cell death that removes damaged or
+            unnecessary cells. The immune system recognizes and eliminates
+            abnormal cells, but sometimes cancer can evade the immune response.
+            As we age, the occurrence of genetic changes that cause cancer may
+            increase the risk of developing the disease in older age, since the
+            immune system gradually becomes less effective at fighting abnormal
+            cells. Cancer cells are characterized by modifications in their DNA
+            that lead to abnormal and continuous division, after which they can
+            start invading and growing in other parts of the body. There is also
+            benign tumors, which are not cancerous but can cause problems if
+            located in critical areas.
+          </p>
+          <p>
+            <b>Where Cancer Can Develop.</b> Cancer can develop in any part of
+            the body, as there are more than 100 types of this disease, usually
+            named after the organs or tissues where they begin. For example,
+            lung cancer starts in the lungs, brain cancer in the brain, and
+            carcinoma refers to cancer that forms in tissues. This means cancer
+            can occur almost anywhere in the human body, including the blood.
+            Additionally, cancer cells can spread throughout the body through a
+            process called metastasis, where they break away from the primary
+            site and move to other parts of the body. This complicates treatment
+            and requires a comprehensive therapeutic approach.
+          </p>
+          <p>
+            <b>This article will cover two categories of foods:</b> those that
+            may contribute to cancer development and those that are beneficial
+            for its prevention. It is important to note that reducing the risk
+            of cancer cannot be achieved through diet alone. Supporting the
+            immune system plays a key role in the body’s ability to fight the
+            growth of cancer cells. To do this, it is essential to avoid harmful
+            habits such as smoking, stress, insufficient sleep, and drug use, as
+            these factors can promote mutations and impair immune function.
+            Among the healthy habits that help maintain immunity are a balanced
+            diet, regular physical activity, avoiding harmful foods, and leading
+            a generally healthy lifestyle.
+          </p>
+        </div>
+
+        <!-- 2 Part: Main part about Products -->
+
+        <!-- 2 Photo: Eat -->
+        <img
+          class="image-part"
+          src="fig/cancer_nutrition_img2.jpg"
+          sizes="(max-width: 360px) 280px, (max-width: 480px) 440px, 800px"
+          alt="Eat"
+        />
+
+        <!-- Product List -->
+        <div>
+          <!-- Main Dishes -->
+          <div>
+            <!-- Header name 1-->
+            <h3 class="products-header" id="main-dishes-header">
+              🚫 Harmful Foods
+            </h3>
+            <p style="margin-bottom: -30px">
+              This section explores the negative effects and health risks
+              associated with consuming harmful foods, particularly in relation
+              to the development of cancer, along with recommendations on how to
+              avoid them.
+            </p>
+            <h5 class="products-header" id="main-dishes-header">
+              🥩 Red and Processed Meat
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Sausages</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Ham</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Hot dogs</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Bacon</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Canned meats</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Corned beef</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Beef (Red meat)</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Pork (Red meat)</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Lamb (Red meat)</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Processed meat includes any type of meat preserved through
+              smoking, salting, curing, or canning. Most processed meats are red
+              meats, which contain hemoglobin and myoglobin. When processed,
+              these compounds can form carcinogenic substances such as
+              nitrosamines. As a result, processed meat has been linked to an
+              increased risk of various cancers, particularly colorectal,
+              stomach, and prostate cancers.
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4698595/"
+                >Scientific studies</a
+              >
+              show that consuming just 50 grams of processed meat per day may
+              increase the risk of colorectal cancer by 18%.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🍔 Fried Food and Fast Food
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Hamburgers and cheeseburgers</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Deep-fried foods</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list"
+                  >Pizza (with salami and pepperoni)</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="products-list">Hot dogs</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Sauces and dressings</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Fried chicken and wings</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Soft drinks and energy drinks</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              When starchy foods like potatoes, wheat, corn, rice, peas, and
+              other grains or legumes are cooked at high temperatures — through
+              frying, baking, roasting, or toasting — they produce a compound
+              called acrylamide.
+              <a
+                class="additional-link"
+                href="https://www.mdpi.com/1420-3049/25/2/368"
+                >Studies</a
+              >
+              confirm that acrylamide, formed during high-temperature cooking,
+              can damage DNA and trigger apoptosis (cell death). Consuming large
+              amounts of fried food increases the risk of type 2 diabetes and
+              obesity. These conditions can lead to oxidative stress and chronic
+              inflammation, further increasing the risk of cancer.
+              <a
+                class="additional-link"
+                href="https://www.wcrf.org/latest/news-and-updates/new-study-reveals-ultra-processed-foods-linked-to-increased-cancer-risk-diabetes-and-heart-disease/#:~:text=The%20researchers%20discovered%20that%20the,beverages%20(eg%20soft%20drinks)."
+                >Fast food</a
+              >, often high in saturated fats and processed meats, has been
+              linked to a higher risk of cancers, especially colorectal and
+              breast cancer. Frequent consumption of such foods is also
+              associated with excess body weight, which contributes to an
+              overall elevated cancer risk.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🍲 Overcooked Foods
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Grilled</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Barbecued</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Pan-fried</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Overcooking food, especially meat, can lead to the formation of
+              carcinogens. Cooking at high temperatures or over an open flame
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7190379/"
+                >increases</a
+              >
+              the production of carcinogenic polycyclic aromatic hydrocarbons
+              (PAHs) and heterocyclic amines (HCAs), which may raise cancer risk
+              by damaging the DNA in your cells. To reduce this risk, it's
+              recommended to use healthier cooking methods such as pressure
+              cooking, baking, or pan-frying at lower temperatures, as well as
+              slow cooking in a pot or multicooker.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🍫 Sugar and Refined Carbohydrates
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">White sugar</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Sugary drinks</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Sweets and candies</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Sweet snacks and desserts</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Cookies and pastries</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">White pasta</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">White bread</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">White rice</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Consuming foods high in sugar and starch can increase the risk of
+              type 2 diabetes and obesity, which contribute to inflammation and
+              oxidative stress — factors that raise the risk of cancers such as
+              ovarian, breast, endometrial (uterine), and colorectal cancer. To
+              reduce this impact, it's recommended to replace these items with
+              healthier alternatives like whole grain bread, whole wheat pasta,
+              brown rice, and oats. A general
+              <a
+                class="additional-link"
+                href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sugar/how-much-sugar-is-too-much#:~:text=AHA%20Sugar%20Recommendation&text=Men%20should%20consume%20no%20more,32%20grams)%20of%20added%20sugar!"
+                >guideline</a
+              >
+              is to limit added sugar intake to 25 grams per day for women and
+              36 grams per day for men.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">🍷 Alcohol</h5>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              When you consume alcohol, your liver breaks it down into
+              acetaldehyde — a carcinogenic compound.
+              <a
+                class="additional-link"
+                href="https://www.cancervic.org.au/cancer-information/preventing-cancer/limit-alcohol/how-alcohol-causes-cancer#:~:text=Alcohol%20can%20cause%20cancer%20by,the%20absorption%20of%20other%20carcinogens."
+                >Acetaldehyde</a
+              >
+              can damage DNA and contribute to oxidative stress. It can also
+              impair the immune system, making it harder for the body to target
+              precancerous and cancerous cells. In women, alcohol may increase
+              estrogen levels, which is linked to a higher risk of estrogen
+              receptor-positive breast cancer. However, moderate consumption of
+              red wine during dinner may have some benefits, as
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3023893/"
+                >studies</a
+              >
+              suggest it could reduce overall mortality and the risk of ischemic
+              heart disease and stroke.
+            </p>
+          </div>
+
+          <!-- 3 Part: Statisctics -->
+          <div>
+            <!-- 3 Photo: Strategy -->
+            <img
+              class="image-part"
+              src="fig/cancer_nutrition_img3.jpg"
+              sizes="(max-width: 360px) 280px, (max-width: 480px) 440px, 800px"
+              alt="Strategy"
+              width="1080"
+            />
+          </div>
+          <div>
+            <!-- Header name 1-->
+            <h3 class="products-header" id="main-dishes-header">
+              ✅ Healthy Foods
+            </h3>
+            <p style="margin-bottom: -30px">
+              This section highlights foods that may help prevent the
+              development of cancer.
+            </p>
+            <h5 class="products-header" id="main-dishes-header">
+              🥬 Leafy Green Vegetables
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Kale</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Arugula</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Spinach</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Mustard greens</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Swiss chard</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Leafy greens are rich in carotenoid antioxidants such as
+              beta-carotene, lutein, and zeaxanthin, which are linked to a
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411786/"
+                >lower risk</a
+              >
+              of breast cancer. They also contain folic acid and B vitamins,
+              which may
+              <a
+                class="additional-link"
+                href="https://www.webmd.com/cancer/ss/slideshow-cancer-fighting-foods"
+                >protect</a
+              >
+              against cancers of the breast, mouth, larynx, pancreas, lungs,
+              skin, and stomach — though
+              <a
+                class="additional-link"
+                href="https://link.springer.com/article/10.1007/s13668-018-0237-y"
+                >research</a
+              >
+              results on these effects remain mixed and require further study.
+              Additionally, the antioxidants in these vegetables
+              <a
+                class="additional-link"
+                href="https://www2.ca.uky.edu/agcomm/pubs/FCS3/FCS3567/FCS3567.pdf"
+                >help</a
+              >
+              combat free radicals that can damage cells and promote cancer
+              development.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🥦 Cruciferous Vegetables
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Cabbage</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Cauliflowers</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Broccoli</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Kohlrabi</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Brussels sprouts</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Romanesco</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Cruciferous vegetables contain glucosinolate compounds that are
+              converted into isothiocyanates — substances known for their
+              anti-cancer properties.
+              <a
+                class="additional-link"
+                href="https://pubmed.ncbi.nlm.nih.gov/20388854/"
+                >Studies</a
+              >
+              have shown that high consumption of these vegetables is associated
+              with a reduced risk of breast cancer and may also be linked to a
+              lower risk of colorectal and colon cancer.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🧅 Allium Vegetables
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Onions</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Garlic</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Leeks</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Allium vegetables are rich in valuable nutrients, including
+              organosulfur compounds, flavonoid antioxidants, and vitamin C.
+              Compounds found in onions have been shown to
+              <a
+                class="additional-link"
+                href="https://cancerquest.org/newsroom/2017/06/onions-kill-cancer-cells#:~:text=It%20was%20found%20that%20chemicals,almost%20all%20animals%20and%20plants."
+                >help</a
+              >
+              kill colon and breast cancer cells by activating apoptosis
+              pathways. While cooking onions may
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5053314/#:~:text=On%20the%20other%20hand%2C%20there,CI%2C%201.02%E2%80%932.32)."
+                >increase</a
+              >
+              the risk of breast cancer, high consumption of raw onions may have
+              a mild protective effect. However, further research is needed to
+              better understand their impact on breast health.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🍊 Citrus Fruits
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Orange</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Grapefruit</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Lemon</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Lime</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Mandarin</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              A large-scale
+              <a
+                class="additional-link"
+                href="https://pubmed.ncbi.nlm.nih.gov/19856118/"
+                >study</a
+              >
+              found that higher citrus fruit consumption may reduce the risk of
+              cancers of the gastrointestinal tract, upper respiratory tract,
+              <a
+                class="additional-link"
+                href="https://pubmed.ncbi.nlm.nih.gov/18824947/"
+                >and</a
+              >
+              pancreas. Including several servings of citrus fruits in your
+              weekly diet may help lower the risk of certain cancers. However,
+              it's important to note that these studies may not account for all
+              contributing factors, and more research is needed to fully
+              understand the mechanisms behind their effects.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">🍓 Berries</h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Strawberry</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Raspberry</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Blueberry</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Blackberry</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Cranberry</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Currant</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Bilberry</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Lingonberry</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Rosehip</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Berries are rich in anthocyanins, plant pigments with powerful
+              antioxidant properties that may help reduce cancer risk.
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8747047/"
+                >Studies</a
+              >
+              have shown that regular berry consumption may assist in the
+              prevention of stomach, intestinal, prostate, and breast cancers by
+              combating free radicals and preventing cellular damage. Including
+              one or two servings of berries in your daily diet can support
+              cancer prevention.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🐟 Fatty Fish
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Salmon</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Sardines</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Mackerel</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Cod</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Atlantic mackerel</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Anchovies</span>
+              </li>
+            </ol>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Including a substantial amount of fish in your diet is associated
+              with a
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/10393143"
+                >reduced</a
+              >
+              risk of gastrointestinal and colorectal cancers. Fish provides
+              important nutrients such as vitamin D and omega-3 fatty acids,
+              which are believed to have anti-recurrence properties against
+              cancer. Maintaining adequate vitamin D levels may offer
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1470481/"
+                >protection</a
+              >
+              from cancer, while omega-3 fatty acids are known to
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/23919748"
+                >inhibit</a
+              >
+              disease progression. To maximize these health benefits, it is
+              recommended to include two servings of fatty fish per week in your
+              diet.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">🌱 Beans</h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Kidney beans</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Black beans</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Lentils</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Chickpeas</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Mung beans</span>
+              </li>
+            </ol>
+            <!-- Discription -->
+            <p class="products-discription">
+              Beans contain a variety of phytochemicals such as flavonoids,
+              phytosterols, and polyphenols, which exhibit antioxidant
+              properties and help protect cells from damage that may lead to
+              cancer development. For example, kidney beans are high in fiber,
+              which some
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/28064440"
+                >studies</a
+              >
+              suggest may help protect against colorectal cancer. Animal studies
+              have also shown that feeding rats black or dark blue beans before
+              inducing colon cancer can
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/12672642"
+                >block</a
+              >
+              the development of cancer cells. Therefore, including several
+              servings of beans in your weekly diet can increase fiber intake
+              and reduce the risk of cancer.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🌿 Herbs and Spices
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Turmeric</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Oregano</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Basil</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Rosemary</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Thyme</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Parsley</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Ginger</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Cinnamon</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Cilantro</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Coriander</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Chili pepper</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Flax seeds</span>
+              </li>
+            </ol>
+            <!-- Discription -->
+            <p class="products-discription">
+              Herbs and spices are widely known for their health benefits and
+              anti-cancer properties. For example, oregano contains antioxidants
+              like carvacrol and rosmarinic acid, which have
+              <a
+                class="additional-link"
+                href="https://www.hindawi.com/journals/bmri/2017/1681392/"
+                >shown</a
+              >
+              significant anti-tumor effects against breast cancer. Curcumin,
+              the main active compound in turmeric, and apigenin, a flavonoid
+              found in parsley, also
+              <a
+                class="additional-link"
+                href="https://www.mdpi.com/1422-0067/20/5/1033/htm"
+                >demonstrate</a
+              >
+              anti-cancer effects. Adding these herbs and spices to your diet
+              may help in cancer prevention and support overall health. Many
+              other herbs and spice blends, such as thyme, curry mixes, and
+              ginger, are also recognized for their cancer-fighting properties.
+              Additionally, foods like flax seeds, rich in fiber and beneficial
+              fatty acids, contribute positively to cancer
+              <a
+                class="additional-link"
+                href="https://www.mdanderson.org/cancerwise/3-nutrients-cancer-survivors-should-know-flaxseed-omega-3s-iron.h00-159305412.html#:~:text=Although%20flaxseed%20is%20classified%20as,linked%20to%20breast%20cancer%20prevention."
+                >defense</a
+              >
+              and general wellness. Cinnamon, when included in the diet, can
+              also play a notable role in combating cancer and other diseases by
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/24019277"
+                >helping</a
+              >
+              to lower blood sugar levels and reduce inflammation.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🌾 Whole Grain Products
+            </h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Wheat</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Brown rice</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Barley</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Quinoa</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Rye</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Bulgur</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Buckwheat</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Pearl barley</span>
+              </li>
+            </ol>
+            <!-- Discription -->
+            <p class="products-discription">
+              Whole grains are rich in fiber, vitamins, and minerals, making
+              them highly beneficial for health.
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5310957/"
+                >Research</a
+              >
+              confirms that regular consumption of whole grains can play a key
+              role in cancer prevention. For example, a 2016
+              <a
+                class="additional-link"
+                href="https://pubmed.ncbi.nlm.nih.gov/25915188/"
+                >study</a
+              >
+              showed that women who ate more than seven servings of whole grains
+              per week had a significantly lower risk of developing breast
+              cancer. Additionally, high-quality carbohydrates found in whole
+              grains are linked to a
+              <a
+                class="additional-link"
+                href="https://pubmed.ncbi.nlm.nih.gov/32444240/"
+                >reduced</a
+              >
+              risk of breast cancer. Including whole grains in your diet may
+              also offer protection against other types of cancer such as
+              pancreatic cancer, colorectal cancer, stomach cancer, and
+              esophageal cancer.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">🥜 Nuts</h5>
+            <!-- List -->
+            <ol>
+              <li class="list-item">
+                <span class="products-list">Walnuts</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Almonds</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Pecans</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Hazelnuts</span>
+              </li>
+              <li class="list-item">
+                <span class="products-list">Brazil nuts</span>
+              </li>
+            </ol>
+            <!-- Discription -->
+            <p class="products-discription">
+              Nuts are considered some of the healthiest foods due to their
+              content of beneficial fats, proteins, vitamins, and minerals. In
+              particular, Brazil nuts, known for their high selenium content,
+              may
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3208545/"
+                >help</a
+              >
+              protect against cancer, especially in people with low levels of
+              this micronutrient. Animal
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/24500939"
+                >studies</a
+              >
+              have shown that including walnuts in the diet can significantly
+              reduce the growth rate of cancer cells and the number of tumor
+              formations. These findings highlight the potential importance of
+              nut consumption for cancer protection.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">
+              🍑 Peaches, 🍎 Apples, 🍐 Pears, and 🍇 Grapes
+            </h5>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              These fruits contain important nutrients such as vitamin C,
+              flavonoids, and polyphenols, which have antioxidant properties and
+              help combat free radicals in the body.
+              <a
+                class="additional-link"
+                href="https://www.healthline.com/nutrition/breast-cancer-foods#:~:text=Studies%20analyzing%20data%20from%20hundreds,protect%20against%20breast%20cancer%20cells."
+                >Studies</a
+              >
+              have shown that regular consumption of these fruits may reduce the
+              risk of certain types of cancer, including stomach cancer,
+              colorectal cancer, and breast cancer. This protective effect is
+              linked to their ability to prevent cellular damage and
+              inflammation, which are key factors in cancer development.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">🥕 Carrots</h5>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Increasing carrot consumption may reduce the risk of certain types
+              of cancer. One
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/26819805"
+                >analysis</a
+              >
+              found that eating carrots could lower the risk of stomach cancer
+              by up to 26%, while another
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/24519559"
+                >study</a
+              >
+              showed an 18% reduction in the likelihood of developing prostate
+              cancer. It is recommended to include carrots in your diet as a
+              healthy snack or side dish several times a week. However, keep in
+              mind that these studies may not account for other factors that
+              could also influence cancer risk.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="products-header" id="main-dishes-header">🍅 Tomatoes</h5>
+
+            <!-- Discription -->
+            <p class="products-discription">
+              Lycopene is a compound found in tomatoes that gives them their
+              bright red color and is associated with anticancer properties.
+              <a
+                class="additional-link"
+                href="https://urology.ucsf.edu/tomatoes#:~:text=In%20the%20Health%20Professionals%20Follow,progression%20(mostly%20biochemical%20recurrence)."
+                >Studies</a
+              >
+              have shown that increased consumption of lycopene and tomatoes may
+              reduce the risk of prostate cancer. A review of 17
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/23883692"
+                >studies</a
+              >
+              confirmed that higher intake of raw and cooked tomatoes, as well
+              as lycopene, is linked to a lower risk of prostate cancer.
+              Additionally,
+              <a
+                class="additional-link"
+                href="https://www.ncbi.nlm.nih.gov/pubmed/11880478"
+                >research</a
+              >
+              involving 47,365 participants found that greater consumption of
+              tomato sauce was associated with a reduced risk of prostate
+              cancer. To increase intake, it is recommended to include one to
+              two servings of tomatoes in your diet daily by adding them to
+              various dishes.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Part: Author's words -->
+        <img
+          class="image-part"
+          src="fig/cancer_nutrition_img4.png"
+          sizes="(max-width: 360px) 280px, (max-width: 480px) 440px, 800px"
+          alt="Notes"
+          width="1080"
+        />
+
+        <!-- Author's words -->
+        <p class="author-text">
+          P.S. As I reflect, I can’t help but summarize this rather extensive
+          article. Cancer ranks as the second most common disease worldwide,
+          surpassed only by cardiovascular diseases. Understanding what cancer
+          is and how it develops is important to avoid misconceptions and to
+          grasp its true nature. Everyone decides which foods to include or
+          exclude from their diet to feel more at ease; however, it’s clear that
+          the list of beneficial foods far outweighs the harmful ones, which is
+          encouraging. Personally, my strategy would be to minimize the
+          consumption of harmful products, particularly processed and red meats,
+          fast food, alcohol, and sweets, since the latter cause many problems.
+          When it comes to processed and fried foods, it’s a bit more
+          complicated because I often cook with sunflower oil in a pan, making
+          it hard to track the degree of processing. But I’ve found a solution:
+          using olive oil, which has been shown to protect against breast and
+          digestive tract cancers. Additionally, as mentioned earlier, it’s
+          beneficial to boil or fry at low temperatures. To improve the
+          nutritional value of my diet, I will definitely include vegetables
+          such as cabbage, apples, citrus fruits, and carrots, and consider
+          switching to fatty fish to diversify my meals. Since I mainly eat
+          chicken, I also use beneficial herbs and spices in its preparation. I
+          have also added other whole grains, like beet rice, to my food pyramid
+          and am considering adding walnuts to my diet. As you can see, I’ve
+          referenced numerous sources and studies confirming different aspects,
+          but despite the abundance of information, it mostly boils down to one
+          list of foods that can be either beneficial or harmful to health.
+        </p>
+      </article>
+
+      <!-- Footer Part -->
+      <footer class="additional-info">
+        <!-- Additional information -->
+        <hr />
+        <p>
+          Sources:
+          <a
+            target="_blank"
+            class="additional-link"
+            href="https://www.healthline.com/health/cancer/cancer-causing-foods#dairy"
+            >healthline</a
+          >,
+          <a
+            target="_blank"
+            class="additional-link"
+            href="https://www.mdanderson.org/publications/focused-on-health/36-foods-that-can-help-lower-your-cancer-risk.h12-1592991.html#:~:text=%22Cancer%2Dfighting%20foods%22&text=The%20list%20is%20usually%20topped,contain%20phytochemicals%2C%22%20says%20Wohlford."
+            >mdanderson</a
+          >,
+          <a
+            target="_blank"
+            class="additional-link"
+            href="https://www.healthline.com/nutrition/cancer-fighting-foods"
+            >healthline</a
+          >,
+          <a
+            target="_blank"
+            class="additional-link"
+            href="https://hsci.harvard.edu/people/disease-areas/cancer"
+            >harvard</a
+          >,
+          <a
+            target="_blank"
+            class="additional-link"
+            href="https://www.aetnainternational.com/en/about-us/explore/aetna-international-podcasts/cancer-causing-foods-cancer-fighting-foods.html"
+            >aetna</a
+          >,
+          <a
+            target="_blank"
+            class="additional-link"
+            href="https://www.medicalnewstoday.com/articles/cancer-causing-foods"
+            >medicalnewstoday</a
+          >,
+          <a
+            target="_blank"
+            class="additional-link"
+            href="https://www.cancer.net/navigating-cancer-care/prevention-and-healthy-living/food-and-cancer-risk"
+            >cancernet</a
+          >
+        </p>
+
+        <!-- Tags -->
+        <p>
+          Tags: <a class="additional-link">#Health</a>
+          <a class="additional-link">#Nutrition</a>
+        </p>
+
+        <!-- Recommendations -->
+        <p>
+          Recommendations:
+          <a href="article1.html" class="additional-link"
+            >Which Products Help You Get a Good Sleep</a
+          >,
+          <a href="article2.html" class="additional-link"
+            >Tips and strategies to improve your sleep quality at night</a
+          >
+        </p>
+
+        <!-- Rights Reserved Animatoion -->
+        <p class="p-reserved">
+          All rights reserved © 2023 Varich Journal. All content, images, and
+          materials on this website are protected by copyright.
+        </p>
+      </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      const hideNav = () => {
+        const hiddenNavClassName = "navigation__hidden";
+        const fixedNavClassName = "navigation__fixed";
+        const screenWidth = window.innerWidth;
+        var headerHeight = 80;
+        var navHeight = 42;
+        if (screenWidth <= 768) {
+          headerHeight = -60;
+          navHeight = 60;
+        }
+
+        let initialYvalue = window.scrollY;
+        let body = document.querySelector("body");
+
+        let isItHidden = false;
+        let isItFixed = false;
+
+        window.addEventListener("scroll", (ev) => {
+          const scrollY = window.scrollY;
+          if (scrollY > headerHeight) {
+            makeItFixed();
+
+            if (scrollY > headerHeight + navHeight && scrollY > initialYvalue) {
+              hide();
+            } else {
+              show();
+            }
+          } else {
+            makeItNotFixed();
+          }
+
+          initialYvalue = scrollY;
+        });
+
+        function hide() {
+          if (!isItHidden) {
+            body.classList.add(hiddenNavClassName);
+            isItHidden = true;
+          }
+        }
+
+        function show() {
+          if (isItHidden) {
+            body.classList.remove(hiddenNavClassName);
+            isItHidden = false;
+          }
+        }
+
+        function makeItFixed() {
+          if (!isItFixed) {
+            body.classList.add(fixedNavClassName);
+            isItFixed = true;
+          }
+        }
+
+        function makeItNotFixed() {
+          if (isItFixed) {
+            body.classList.remove(fixedNavClassName);
+            isItFixed = false;
+          }
+        }
+      };
+
+      hideNav();
+
+      $(document).ready(function () {
+        $("#myButton").click(function () {
+          $(this).toggleClass("active");
+        });
+      });
+
+      // Navbar Menu for Phone Model
+      function enableBodyScroll() {
+        document.body.style.overflow = "auto";
+      }
+
+      function disableBodyScroll() {
+        document.body.style.overflow = "hidden";
+      }
+
+      window.addEventListener("hashchange", function () {
+        const currentHash = window.location.hash;
+
+        if (currentHash === "#menu") {
+          disableBodyScroll();
+        } else {
+          enableBodyScroll();
+        }
+      });
+
+      const form = document.getElementById("Formular");
+
+      form.addEventListener("submit", function (event) {
+        var myElement = document.getElementById(".invalid-input");
+        myElement.style.display = "block";
+
+        var myCommentElement = document.getElementById(
+          ".text-field input:invalid"
+        );
+        myCommentElement.style.borderColor = "#dc161c";
+      });
+    </script>
   </body>
 </html>
