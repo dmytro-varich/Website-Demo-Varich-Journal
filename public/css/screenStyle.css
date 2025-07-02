@@ -1359,7 +1359,7 @@ textarea.touched.invalid {
 .artcomment-section {
   display: flex;
   flex-direction: column;
-  margin-bottom: -22px;
+  margin-bottom: -14px;
   margin-left: 10px;
 }
 
