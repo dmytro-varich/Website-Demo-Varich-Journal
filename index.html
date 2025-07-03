@@ -1232,8 +1232,10 @@
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script>
+      window.uploadedFile = null;
       function handleFileSelect(event) {
         const file = event.target.files[0];
+        window.uploadedFile = file;
         const shortName = shortenFilename(file.name);
         const container = document.getElementById("upload-container");
 
@@ -1248,6 +1250,7 @@
       }
 
       function removeFile() {
+        window.uploadedFile = null;
         const container = document.getElementById("upload-container");
         container.innerHTML = `
     <label for="upload" id="upload-label" class="upload-btn">Upload Image</label>

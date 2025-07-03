@@ -336,7 +336,6 @@ function addArticle(targetElm) {
     document.getElementById("template-addArticle").innerHTML,
     responseJSON
   );
-
   submitArticleForm();
 }
 
@@ -379,13 +378,11 @@ async function submitArticleForm(articleId = null) {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const formData = new FormData(form);
-
-      const fileInput = document.getElementById("upload");
-      const file = fileInput.files[0];
+        
       let imageLink = null;
       let manualLink = formData.get("photo");
-      if (file) {
-        imageLink = await uploadImageAndGetUrl(file);
+      if (window.uploadedFile) {
+        imageLink = await uploadImageAndGetUrl(window.uploadedFile);
       } else if (manualLink && (await isValidImageUrl(manualLink))) {
         imageLink = manualLink;
       }
