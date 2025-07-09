@@ -241,15 +241,22 @@ function fetchAndDisplayArticles(targetElm, current, totalCount) {
       };
 
       if (!data.comments || data.comments.length === 0) {
-        data.comments = null; 
+        data.comments = null;
       }
-        
+
       await Promise.all(data.articles.map(fetchCommentsForArticle));
       console.log(data.articles);
       document.getElementById(targetElm).innerHTML = Mustache.render(
         document.getElementById("template-articles").innerHTML,
         { ...data, ...data4rendering }
       );
+      const articlesMain = document.getElementById("articles-main");
+      console.log("GROK IS TRUE?", articlesMain);
+      const routerView = document.getElementById("router-view");
+      if (articlesMain && routerView) {
+        routerView.style.left = "5%";
+        routerView.style.top = "25%";
+      }
 
       const leftArrow = document.querySelector(".articles-left-arrow");
       const rightArrow = document.querySelector(".articles-right-arrow");
@@ -273,7 +280,6 @@ function fetchAndDisplayArticles(targetElm, current, totalCount) {
       alert("ERROR: " + this.statusText);
     }
   }
-
   console.log(url);
   var ajax = new XMLHttpRequest();
   ajax.addEventListener("load", reqListener);
@@ -281,44 +287,6 @@ function fetchAndDisplayArticles(targetElm, current, totalCount) {
   ajax.send();
   console.log("send");
 }
-
-// function fetchAndDisplayArticles(targetElm, current,totalCount){
-//     const url = "https://wt.kpi.fei.tuke.sk/api/article";
-
-//     function reqListener () {
-// 		console.log(this.responseText)
-//         if (this.status == 200) {
-//             current=parseInt(current);
-//             totalCount=parseInt(totalCount);
-//             const data4rendering={
-//         currPage:current,
-//         pageCount:totalCount
-//     };
-//             if(current>1){
-//         data4rendering.prevPage=current-1;
-//     }
-
-//     if(current<totalCount){
-//         data4rendering.nextPage=current+1;
-//     }
-// 			document.getElementById(targetElm).innerHTML =
-//             Mustache.render(
-//                 document.getElementById("template-articles").innerHTML,
-//                 JSON.parse(this.responseText), data4rendering
-//                 );
-
-// 		} else {
-// 			alert("ERROR: " + this.statusText);
-// 		}
-
-//     }
-//     console.log(url)
-// 	var ajax = new XMLHttpRequest();
-// 	ajax.addEventListener("load", reqListener);
-// 	ajax.open("GET", url, true);
-// 	ajax.send();
-// 	console.log("send")
-// }
 
 function addArticle(targetElm) {
   const userNameGoogle = localStorage.getItem("userName");
@@ -378,7 +346,7 @@ async function submitArticleForm(articleId = null) {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const formData = new FormData(form);
-        
+
       let imageLink = null;
       let manualLink = formData.get("photo");
       if (window.uploadedFile) {
@@ -491,11 +459,13 @@ function showArticle(targetElm, articleId) {
         document.getElementById("template-showArticle").innerHTML,
         upgradeJSON
       );
+
       const routerView = document.getElementById("router-view");
       if (routerView) {
         routerView.style.left = "0";
         routerView.style.top = "0";
       }
+
       const indexBody = document.getElementsByClassName("index-body")[0];
       if (indexBody) {
         indexBody.style.overflowY = "visible";
