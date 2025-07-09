@@ -55,13 +55,39 @@ Semester project for the «Web Technologies» course (2nd year, [TUKE](https://w
 ...
 
 ## 🚀 Features
-- ...
-- ...
-- ...
-- ...
-- ...
-- ...
-- ...
+
+- **Main Page (`index.html`)**:
+  - Journal title and a custom-designed **SVG logo**
+  - Brief project description (on the left) and visual examples of magazine covers (on the right)
+  - Navigation tabs: *Journal*, *Articles*, *Comments*
+  - Button for creating a new article
+  - **Google Sign-In** authentication (user name stored in `localStorage`)
+
+- **Article Creation Form**:
+  - Fields: author name, title, preview image/link, tags (`datalist`), content (`textarea`)
+  - Buttons: *Submit* (send to server), *Reset* (clear form)
+  - After submission, the user is automatically redirected to the **Articles** section
+
+- **Articles Section**:
+  - Articles are loaded from the server and displayed
+  - Each article appears as a card with: preview image, title, author, date, tags
+  - Buttons: **Edit** (open editing form), **Delete** (remove article), **Add Comment** (comment on article)
+  - Clicking on the article title opens a full article view
+  - Pagination is implemented (arrow navigation)
+
+- **Comments Section**:
+  - The **+ Add Comment** button opens a comment form
+  - Comments are saved in **localStorage**
+  - All comments are displayed on the page
+  - Pagination allows browsing through all comments
+  - This section serves as a global feedback wall for the Varich Journal project
+
+- **Static Articles by Varich Journal**:
+  - Separate static pages: `article1.html`, `article2.html`, `article3.html`, `article4.html`
+  - Fully **responsive** design
+  - Includes **print styles**
+  - Uses CSS **animations**, **transformations**, and **transitions**
+
 
 ## 🧑🏻 Author 
 Dmytro Varich is the creator of this web-app project. You can learn more about his projects on his personal [Telegram channel](https://t.me/varich_channel), as well as connect with him via LinkedIn ([dmytro-varich](https://www.linkedin.com/in/dmytro-varich/)) and email (varich.it@gmail.com).
