@@ -61,7 +61,7 @@ Semester project for the «Web Technologies» course (2nd year, [TUKE](https://w
 <img width="960" height="540" alt="Articles" src="https://github.com/dmytro-varich/Website-Demo-Varich-Journal/blob/main/assets/articles.png" />
 <img width="960" height="540" alt="Edit Article" src="https://github.com/dmytro-varich/Website-Demo-Varich-Journal/blob/main/assets/edit_article.png" />
 <img width="960" height="540" alt="Article" src="https://github.com/dmytro-varich/Website-Demo-Varich-Journal/blob/main/assets/article.png" />
-<img width="960" height="540" alt="Add Comment on Article" src="https://github.com/dmytro-varich/Website-Demo-Varich-Journal/blob/main/assets/add_comment_on_article.png" />
+<img width="960" height="540" alt="Add Comment on Article" src="https://github.com/dmytro-varich/Website-Demo-Varich-Journal/blob/main/assets/add_comment_on_artcile.png" />
 <img width="960" height="540" alt="Global Comments" src="https://github.com/dmytro-varich/Website-Demo-Varich-Journal/blob/main/assets/global_comments.png" />
 <img width="960" height="540" alt="Add Global Comment" src="https://github.com/dmytro-varich/Website-Demo-Varich-Journal/blob/main/assets/add_global_comment.png" />
 </p>
