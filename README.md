@@ -52,7 +52,7 @@ Semester project for the «Web Technologies» course (2nd year, [TUKE](https://w
 * Integrate **Google Sign-In** for user authentication.
  
 ## 🎥 Demo Video
-...
+https://github.com/user-attachments/assets/50503a56-f1f2-4a8d-9987-ec38e10bcdc6
 
 ## 🎞️ Key Frames
 <p align="center">
